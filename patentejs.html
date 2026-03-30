@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>Patente</title>
+</head>
+<body>
+     
+<h2 style="color:green;"><strong>INSERISCI I TUOI DATI PER CONTINUARE</strong></h2>
+
+nome:<input type="text" id="nome" ><br><br>
+cognome:<input type="text" id="nome"><br><br>
+eta:<input type="number" id="eta"><br><br>
+
+<button onclick="controlla()">Invia</button>
+
+<p id="risultato"></p>
+<img id="img" width="200">
+
+<script>
+function controlla() {
+    var eta = document.getElementById("eta").value;
+    var risultato = document.getElementById("risultato");
+    var img = document.getElementById("img");
+
+    if (eta >= 18) {
+        risultato.innerHTML = "<em>Patente B</em>";
+        img.src = "https://tse4.mm.bing.net/th/id/OIP.D1IsWshk4k0ejIo-bS18hAHaEc?rs=1&pid=ImgDetMain&o=7&rm=3";
+    } else if (eta >= 16) {
+        risultato.innerHTML = "Patente A";
+        img.src = "https://th.bing.com/th/id/R.e6fa1e5f743a96b20abea878a62b3306?rik=hfY1twAL8BnPEw&riu=http%3a%2f%2fwww.siulptoscana.com%2fimages%2fdemo%2fimage-302-full.jpg&ehk=yg3z2un3KPwOX79kr6Z8cZ4t6suh8LCqccU3fiT0Eb0%3d&risl=&pid=ImgRaw&r=0";
+    } else {
+        risultato.innerHTML = "<em>Riprova quando sarai più grande</em>";
+        img.src = "";
+    }
+}
+</script>
+
+</body>
+</html>
+
